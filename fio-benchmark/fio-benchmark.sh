@@ -111,12 +111,12 @@ SetExecParameters ()
         exit 0
     fi
 
-    sed -i "s/^filename=.*/filename=\/dev\/$DeviceName/g" -rl ./config/*/*
+    sed -i "s/^filename=.*/filename=\/dev\/$DeviceName/g" -r ./config/*/*
     if [ "${Runtime}" == "" ]
     then
-        sed -i "s/^runtime=.*/runtime=60/g" -rl ./config/*/*
+        sed -i "s/^runtime=.*/runtime=60/g" -r ./config/*/*
     else
-        sed -i "s/^runtime=.*/runtime=$Runtime/g" -rl ./config/*/*
+        sed -i "s/^runtime=.*/runtime=$Runtime/g" -r ./config/*/*
     fi
 }
 
